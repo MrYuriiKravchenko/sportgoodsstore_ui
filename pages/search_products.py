@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from pages.locators import search_locators as loc
+
 class SearchProduct(BasePage):
     page_url = ""
 
@@ -12,3 +13,4 @@ class SearchProduct(BasePage):
     def check_found_product(self, product_results):
         results_found = self.find(loc.results_found_locator)
         assert results_found.text == product_results
+
